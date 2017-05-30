@@ -1,0 +1,70 @@
+﻿
+
+@{
+    ViewBag.Title = "ListaPacientes";
+    var lista = (List<WebApplication6.Models.EPaciente>) ViewBag.paciente;
+}
+
+<h2>ListaPacientes</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+           Historia
+        </th>
+        <th>
+            ApePat
+        </th>
+        <th>
+           ApeMat
+        </th>
+        <th>
+         NomPac
+        </th>
+        <th>
+           FecNac
+        </th>
+        <th>
+          NumDoc
+        </th>
+        <th>
+            estado
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in lista) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Historia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ApePat)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ApeMat)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NomPac)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FecNac)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NumDoc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.estado)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>
