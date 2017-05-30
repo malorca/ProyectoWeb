@@ -15,6 +15,7 @@ namespace WebApplication6.Controllers
     [Authorize]
     public class AccountController : Controller
     {
+        //se actualizo en el repositorio que le indicamos
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
 
